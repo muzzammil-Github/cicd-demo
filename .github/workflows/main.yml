@@ -18,9 +18,10 @@ jobs:
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           IMAGE_NAME: my-image
+          id: ${{ github.run.id }}
         run: |
-          docker build -t $DOCKERHUB_USERNAME/$IMAGE_NAME:${{ github.run.id }} .
-          docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:${{ github.run.id }}
+          docker build -t $DOCKERHUB_USERNAME/$IMAGE_NAME:$id .
+          docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:$id
 
   test:
     runs-on: ubuntu-latest
