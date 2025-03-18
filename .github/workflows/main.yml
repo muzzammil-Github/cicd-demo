@@ -1,7 +1,6 @@
 name: CI pipeline
-on:
-  push:
-    branches: [ main ]
+on: workflow_dispatch
+
 jobs:
   build:
     runs-on: ubuntu-latest
