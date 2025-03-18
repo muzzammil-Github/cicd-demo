@@ -1,6 +1,7 @@
 name: CI pipeline
 on: workflow_dispatch
 # this is from remote directory
+# this is from remote directory
 
 jobs:
   build:
