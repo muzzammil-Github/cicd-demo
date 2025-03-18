@@ -1,6 +1,4 @@
 name: CI pipeline
-# thius is the test comment ##
-# this is pull command #
 on:
   push:
     branches: [ main ]
